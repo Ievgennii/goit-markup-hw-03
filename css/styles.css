@@ -50,19 +50,28 @@ img {
   margin-right: auto;
   width: 1200px;
   padding: 0 15px;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 .section {
   padding: 94px 0;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 /* Header */
 
 .header {
   border-bottom: 1px solid #ececec;
   padding: 24px 0;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+}
+
+.conteiner.flex {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
 
 /* Logo */
@@ -85,17 +94,29 @@ img {
   color: var(--accent-color);
 }
 
-/* site nav */
+/* Site nav */
 .site-nav {
+  display: flex;
+  margin-left: 93px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-color);
   text-decoration: none;
+  
 }
 
 .site-nav .link.current {
@@ -107,15 +128,26 @@ img {
   color: var(--accent-color);
 }
 
-/* address link */
+/* Address link */
 .address-link {
+  display: flex;
+  margin-left: auto;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
+.address-link .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .address-link .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-color);
   text-decoration: none;
 }
@@ -125,9 +157,10 @@ img {
   color: var(--accent-color);
 }
 
-/* hero */
+/* Hero */
 .hero {
   background-color: var(--background-black-color);
+  text-align: center;
 }
 
 .hero-title {
@@ -146,7 +179,7 @@ img {
   width: 696px;
 }
 
-/* button */
+/* Button */
 .button {
   color: var(--title-color);
   background: var(--primary-white-color);
@@ -217,7 +250,7 @@ img {
   color: var(--title-color);
 }
 
-/* benefits*/
+/* Benefits*/
 .benefits-title {
   color: var(--title-color);
   font-size: 14px;
@@ -228,11 +261,21 @@ img {
   width: 270px;
 }
 
+.benefits.section {
+  padding-bottom: 0;
+}
+
+.list.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .benefits p {
   max-width: 270px;
 }
 
-/* work and our team */
+/* Work and Our team */
 .work-title,
 .team-title {
   color: var(--title-color);
@@ -244,9 +287,14 @@ img {
   margin-bottom: 50px;
 }
 
-/* our team */
+/* Our team */
 .team {
   background-color: var(--background-button-color);
+}
+
+.teamer.list {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Team card */
@@ -290,13 +338,13 @@ img {
   margin-bottom: 10px;
 }
 
-/* footer */
+/* Footer */
 .footer {
   background-color: var(--background-black-color);
   padding: 60px 0;
 }
 
-/* footer logo */
+/* Footer logo */
 .logo-footer {
   color: var(--primary-white-color);
 
@@ -317,7 +365,7 @@ img {
   color: var(--accent-color);
 }
 
-/* footer address */
+/* Footer address */
 .address {
   color: var(--primary-white-color);
   font-style: normal;
@@ -338,10 +386,19 @@ img {
   color: var(--accent-color);
 }
 
-/* portfolio-choice */
+/* Portfolio-choice */
 
 .portfolio-choice {
   margin-bottom: 50px;
+}
+
+.portfolio-choice.list {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-choice .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio-choice .choise {
@@ -353,7 +410,7 @@ img {
   color: var(--accent-color);
 }
 
-/* portfolio-list */
+/* Portfolio-list */
 .portfolio-list .portfolio-work {
   color: var(--title-color);
   font-size: 18px;
@@ -363,20 +420,41 @@ img {
   margin-bottom: 4px;
 }
 
+.portfolio-list.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .portfolio-list p {
   font-size: 16px;
   line-height: 1.88;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
-/* portfolio card */
+.portfolio-list h3 {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+/* Portfolio card */
 
 .portfolio-list li {
   width: 370px;
 
   background: var(--primary-white-color);
-  border-bottom: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
 
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 .portfolio img {
