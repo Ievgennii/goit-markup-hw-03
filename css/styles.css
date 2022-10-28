@@ -148,7 +148,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--title-color);
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -161,6 +161,8 @@ img {
 .hero {
   background-color: var(--background-black-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -429,13 +431,13 @@ img {
 .portfolio-list p {
   font-size: 16px;
   line-height: 1.88;
-  margin-left: 24px;
-  margin-right: 24px;
+  /* margin-left: 24px;
+  margin-right: 24px; */
 }
 
 .portfolio-list h3 {
-  margin-left: 24px;
-  margin-right: 24px;
+  /* margin-left: 24px;
+  margin-right: 24px; */
 }
 /* Portfolio card */
 
@@ -452,8 +454,10 @@ img {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .portfolio-list .item:nth-child(3n) {
